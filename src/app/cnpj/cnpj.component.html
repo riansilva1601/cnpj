@@ -1,0 +1,12 @@
+<div class="container">
+  <h2>Buscar CNPJ</h2>
+  <div class="form-group">
+    <label for="cnpjInput">Digite o CNPJ:</label>
+    <input type="text" class="form-control" id="cnpjInput" [(ngModel)]="cnpjInput" placeholder="Digite o CNPJ">
+  </div>
+  <button class="btn btn-primary" (click)="lookupCnpj()">Buscar</button>
+  <div class="mt-3" *ngIf="cnpjData">
+    <h3>Informações do CNPJ</h3>
+    <pre>{{ cnpjData | json }}</pre>
+  </div>
+</div>
